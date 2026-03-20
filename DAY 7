@@ -1,0 +1,83 @@
+#hacker earth problem no 1
+
+l = int(input())
+n = int(input())
+
+for i in range(n):
+    w, h = map(int, input().split())
+    
+    if w < l or h < l:
+        print("UPLOAD ANOTHER")
+    elif w == h:
+        print("ACCEPTED")
+    else:
+        print("CROP IT")
+q2
+
+t = int(input())
+
+for _ in range(t):
+    n, k = map(int, input().split())
+    arr = list(map(int, input().split()))
+    
+    k = k % n   
+    
+    result = arr[-k:] + arr[:-k]
+    
+    print(*result)
+
+q3
+
+s = input()
+result = ""
+
+for ch in s:
+    if ch.islower():
+        result += ch.upper()
+    else:
+        result += ch.lower()
+
+print(result)
+
+q4
+
+#find the mmajority of the element 
+arr = [3, 3, 4, 2, 4, 4, 2, 4, 4]
+
+candidate = None
+count = 0
+
+for num in arr:
+    if count == 0:
+        candidate = num
+    
+    if num == candidate:
+        count += 1
+    else:
+        count -= 1
+
+
+if arr.count(candidate) > len(arr) // 2:
+    print("Majority element is:", candidate)
+else:
+    print("No majority element")
+
+q5
+
+arr = [1, 2, 3, 4]
+n = len(arr)
+
+result = [1] * n
+
+left = 1
+for i in range(n):
+    result[i] = left
+    left = left * arr[i]
+
+
+right = 1
+for i in range(n-1, -1, -1):
+    result[i] = result[i] * right
+    right = right * arr[i]
+
+print(result)
