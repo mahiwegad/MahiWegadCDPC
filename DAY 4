@@ -1,0 +1,45 @@
+logic 1
+
+def add(X,Y):
+    res=X+Y
+    print(res)
+if __name__=='__main__':
+    a=int(input("Enter Value:"))
+    b=int(input("Enter value:"))
+    add(a,b)
+
+logic 2
+
+def arithmatic(X,Y):
+    res1=X+Y
+    res2=X-Y
+    res3=X*Y
+    res4=X/Y
+    return res1,res2,res3,res4
+if __name__=='__main__':
+    a=int(input("Enter Value:"))
+    b=int(input("Enter value:"))
+    r1,r2,r3,r4=arithmatic(a,b)
+    print(r1,r2,r3,r4)
+
+logic 3
+
+ls=[11,12,13,14]
+print(ls)
+for i in range(len(ls)):
+    print(ls[i])
+
+logic 4
+
+ls=[11,22,33,44,55,66]
+print(ls)
+print(ls[5])
+print(ls[2:6])
+print(ls[2:])
+print(ls[:5])
+print(ls[::1])
+print(ls[::2])
+print(ls[::-1])
+print(ls[::-2])
+
+
