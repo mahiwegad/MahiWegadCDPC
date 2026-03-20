@@ -1,0 +1,124 @@
+
+
+---
+
+1. Compare the Triplets
+
+---
+
+Problem:
+Compare two arrays and give points based on who has the greater value at each index.
+
+Code:
+
+def points(a, b):
+alice_points = 0
+bob_points = 0
+
+```
+for i in range(3):
+    if a[i] > b[i]:
+        alice_points += 1
+    elif a[i] < b[i]:
+        bob_points += 1
+
+return alice_points, bob_points
+```
+
+
+2. A Very Big Sum
+
+---
+
+Problem:
+Find the sum of large numbers in an array.
+
+Code:
+
+def aVeryBigSum(arr):
+total = 0
+
+```
+for num in arr:
+    total += num
+
+return total
+```
+
+3. Diagonal Difference
+
+---
+
+Problem:
+Find the absolute difference between primary and secondary diagonal of a matrix.
+
+Code:
+
+def diagonalDifference(matrix):
+primary_sum = 0
+secondary_sum = 0
+n = len(matrix)
+
+```
+for i in range(n):
+    primary_sum += matrix[i][i]
+    secondary_sum += matrix[i][n - 1 - i]
+
+return abs(primary_sum - secondary_sum)
+```
+
+---
+
+4. Plus Minus
+
+---
+
+Problem:
+Calculate ratio of positive, negative and zero elements.
+
+Code:
+
+def plusMinus(arr):
+n = len(arr)
+
+```
+positive = 0
+negative = 0
+zero = 0
+
+for num in arr:
+    if num > 0:
+        positive += 1
+    elif num < 0:
+        negative += 1
+    else:
+        zero += 1
+
+print(f"{positive/n:.6f}")
+print(f"{negative/n:.6f}")
+print(f"{zero/n:.6f}")
+```
+
+---
+
+5. Rotate Array
+
+---
+
+Problem:
+Rotate array to the right by n steps.
+
+Code:
+
+arr = eval(input("Enter array: "))
+steps = int(input("Enter number of rotations: "))
+
+length = len(arr)
+
+# Rotation logic
+
+arr = arr[length - steps:] + arr[:length - steps]
+
+print("Rotated array:", arr)
+
+---
