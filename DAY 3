@@ -1,0 +1,53 @@
+# logic 1
+n = 65
+for i in range(1, 5):
+    for j in range(1, 5):
+        print(chr(n), end="\t")
+        n = n + 1
+    print()
+
+# logic 2
+for i in range(1, 5):
+    for j in range(1, i + 1):
+        print(i, end="")
+    print()
+
+# logic 3
+for x in range(1, 5):
+    for y in range(1, 5):
+        print(x, end="")
+    print()
+
+print(" ")
+
+for r in range(1, 5):
+    for c in range(1, 5):
+        print(c, end="")
+    print()
+
+# logic 4
+num = 1
+for i in range(1, 5):
+    for j in range(1, 5):
+        print(num, end="\t")
+        num = num + 1
+    print()
+
+# logic 5
+n_input = int(input("enter n: "))
+x_input = int(input("enter x: "))
+ans = 1 
+for i in range(1, n_input):
+    ans = ans + (x_input**i) / i
+print(ans)
+
+# logic 6
+for i in range(1, 5):
+    for j in range(1, i + 1):
+        print("*", end="")
+    print()
+
+for i in range(4, 0, -1):
+    for j in range(1, i + 1):
+        print("*", end="")
+    print()
